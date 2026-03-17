@@ -1,0 +1,14 @@
+kafka:
+  brokers:
+    - "localhost:9092"
+    - "localhost:9093"
+  topic: "test_service"
+  dlq_topic: "test_service_dlq"
+  max_retries: 3
+  retry_backoff_ms: 1000
+  batch_timeout_ms: 100
+  compression: "gzip"
+
+app:
+  poll_interval_sec: 10
+  log_level: "info"
